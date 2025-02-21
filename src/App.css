@@ -1,0 +1,7 @@
+.bg-container {
+    background-image: url('./assets/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
