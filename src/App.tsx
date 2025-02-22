@@ -118,7 +118,12 @@ function App() {
       axios
         .post(
           "https://lr-attack-backend-latest.onrender.com/get_values",
-          payload
+          payload,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
         )
         .then((response) => {
           console.log("Backend response:", response.data);
