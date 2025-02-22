@@ -116,7 +116,10 @@ function App() {
     if (currentStep === "results") {
       setLoading(true);
       axios
-        .post("http://localhost:8000/get_values", payload)
+        .post(
+          "https://lr-attack-backend-latest.onrender.com/get_values",
+          payload
+        )
         .then((response) => {
           console.log("Backend response:", response.data);
           setBackendResponse(response.data);
