@@ -116,15 +116,12 @@ function App() {
     if (currentStep === "results") {
       setLoading(true);
       axios
-        .post(
-          "https://lr-attack-backend-latest.onrender.com/get_values",
-          payload,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
+        .post("https://lr-attack-backend.onrender.com/get_values", payload, {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
         .then((response) => {
           console.log("Backend response:", response.data);
           setBackendResponse(response.data);
